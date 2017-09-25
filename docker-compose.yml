@@ -1,0 +1,20 @@
+wordpress:
+    image: wordpress:4.7
+    links:
+     - mysql:mysql
+    environment:
+     - WORDPRESS_DB_PASSWORD=root
+    ports:
+     - "8080:80"
+    volumes:
+     - ./code:/code
+     - ./html:/var/www/html
+mysql:
+    image: mysql
+    environment:
+     - MYSQL_ROOT_PASSWORD=root
+     - MYSQL_DATABASE=wordpress
+    volumes:
+     - ./database:/var/lib/mysql
+    ports:
+      - "3333:3306"
