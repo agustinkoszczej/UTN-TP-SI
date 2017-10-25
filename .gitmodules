@@ -1,0 +1,4 @@
+[submodule "exploit-CVE-2016-10033"]
+	path = exploit-CVE-2016-10033
+	url = https://github.com/opsxcq/exploit-CVE-2016-10033
+
